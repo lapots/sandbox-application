@@ -15,8 +15,15 @@ resource "null_resource" "read_output" {
 module "travis_module" {
     source = "./travis"
     
-    # investigate why owner and repo still required
     travisci_token = "${var.travisci_token}"
     github_owner = "lapots"
     repo = "sandbox-application"
+}
+
+module "heroku_module" {
+    source = "./heroku"
+    
+    heroku_api_key = "${var.heroku_api_key}"
+    email = "sebastrident@gmail.com"
+    app_name = "sandbox-ui"
 }

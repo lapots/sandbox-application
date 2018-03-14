@@ -1,4 +1,3 @@
 variable "github_token" {}
 variable "travisci_token" {}
-variable "github_owner" {}
-variable "repo" {}
+variable "heroku_api_key" {}
